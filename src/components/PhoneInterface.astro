@@ -1,0 +1,141 @@
+---
+/* src/components/PhoneInterface.astro */
+---
+<div class="phone-card">
+  <header class="phone-header">
+    <div class="header-top">
+      <div class="avatar-circle">
+        <img src="https://placehold.co/100x100/orange/white?text=Avatar" alt="Avatar" />
+      </div>
+      <div class="time-widget">
+        <span class="time">22:33</span>
+        <div class="weather-icons">🌙 ✨</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-scroll-container">
+    <div class="app-grid">
+      
+      <a href="/associacao" class="app-item">
+        <div class="app-icon icon-blue">🔨</div>
+        <span>Assoc.</span>
+      </a>
+
+      <a href="/hobby" class="app-item">
+        <div class="app-icon icon-pink">🎨</div>
+        <span>Hobby</span>
+      </a>
+
+      <a href="/arquivo" class="app-item">
+        <div class="app-icon icon-orange">📘</div>
+        <span>Arquivo</span>
+      </a>
+
+      <a href="/notas" class="app-item"><div class="app-icon icon-blue-light">📋</div><span>Notas</span></a>
+      <a href="/vila" class="app-item"><div class="app-icon icon-green">🗺️</div><span>Guia</span></a>
+      <a href="/animal" class="app-item"><div class="app-icon icon-pink-dark">🐾</div><span>Animal</span></a>
+      <a href="/sonho" class="app-item"><div class="app-icon icon-salmon">🎈</div><span>Sonho</span></a>
+      <a href="/manual" class="app-item"><div class="app-icon icon-brown">📜</div><span>Manual</span></a>
+      <a href="/plano" class="app-item"><div class="app-icon icon-cyan">🏗️</div><span>Plano</span></a>
+      
+      <a href="/loja" class="app-item"><div class="app-icon icon-purple">🛍️</div><span>Loja</span></a>
+      <a href="/config" class="app-item"><div class="app-icon icon-gray">⚙️</div><span>Config</span></a>
+      <a href="/amigos" class="app-item"><div class="app-icon icon-yellow">👥</div><span>Amigos</span></a>
+
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">﹀</div>
+</div>
+
+<style>
+  /* CSS DO CELULAR */
+  .phone-card {
+    background: white;
+    width: 100%;
+    max-width: 380px;
+    height: 600px; /* Altura fixa para permitir o scroll */
+    border-radius: 45px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+    border: 8px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phone-header {
+    background: linear-gradient(180deg, #5e50ff 0%, #8b80ff 100%);
+    padding: 25px 25px 20px 25px;
+    color: white;
+    border-radius: 35px 35px 0 0;
+    flex-shrink: 0;
+    z-index: 10;
+  }
+
+  .header-top { display: flex; align-items: center; gap: 15px; }
+  .avatar-circle img { width: 65px; height: 65px; border-radius: 50%; border: 3px solid #ffaa00; background: #fff; }
+  .time { font-size: 3rem; font-weight: 800; line-height: 1; }
+
+  /* SCROLL MÁGICO */
+  .app-scroll-container {
+    flex-grow: 1;
+    overflow-y: auto; /* Ativa a rolagem */
+    scrollbar-width: none; /* Esconde barra no Firefox */
+    -ms-overflow-style: none;
+    /* Sombra suave no topo ao rolar */
+    mask-image: linear-gradient(to bottom, transparent, black 10px, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10px, black 95%, transparent);
+  }
+  .app-scroll-container::-webkit-scrollbar { display: none; } /* Esconde barra no Chrome */
+
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 10px;
+    padding: 20px;
+    padding-bottom: 60px;
+  }
+
+  .app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #777;
+    font-size: 0.75rem;
+    font-weight: bold;
+    gap: 8px;
+    transition: transform 0.2s;
+  }
+  .app-item:hover { transform: scale(1.05); }
+
+  .app-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .scroll-indicator { text-align: center; color: #ddd; font-weight: bold; padding: 10px; background: white; z-index: 10; }
+
+  /* Cores das Bolinhas */
+  .icon-blue { background: #d0f0fd; }
+  .icon-pink { background: #fce4ec; }
+  .icon-orange { background: #ffe0b2; }
+  .icon-blue-light { background: #e3f2fd; }
+  .icon-green { background: #e8f5e9; }
+  .icon-pink-dark { background: #f8bbd0; }
+  .icon-salmon { background: #ffccbc; }
+  .icon-brown { background: #d7ccc8; }
+  .icon-cyan { background: #b2ebf2; }
+  .icon-purple { background: #e1bee7; }
+  .icon-gray { background: #cfd8dc; }
+  .icon-yellow { background: #fff9c4; }
+</style>
