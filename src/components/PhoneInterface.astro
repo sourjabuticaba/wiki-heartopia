@@ -17,31 +17,89 @@
   <div class="app-scroll-container">
     <div class="app-grid">
       
-      <a href="/associacao" class="app-item">
-        <div class="app-icon icon-blue">🔨</div>
-        <span>Assoc.</span>
+      <a href="/guild" class="app-item">
+        <div class="app-icon icon-blue">
+           <img src="/icons/guild.png" class="icon-img" alt="Guild" />
+        </div>
+        <span>Guild</span>
       </a>
 
       <a href="/hobby" class="app-item">
-        <div class="app-icon icon-pink">🎨</div>
+        <div class="app-icon icon-pink">
+           <img src="/icons/hobby.png" class="icon-img" alt="Hobby" />
+        </div>
         <span>Hobby</span>
       </a>
 
-      <a href="/arquivo" class="app-item">
-        <div class="app-icon icon-orange">📘</div>
-        <span>Arquivo</span>
+      <a href="/archive" class="app-item">
+        <div class="app-icon icon-orange">
+           <img src="/icons/archive.png" class="icon-img" alt="Archive" />
+        </div>
+        <span>Archive</span>
       </a>
 
-      <a href="/notas" class="app-item"><div class="app-icon icon-blue-light">📋</div><span>Notas</span></a>
-      <a href="/vila" class="app-item"><div class="app-icon icon-green">🗺️</div><span>Guia</span></a>
-      <a href="/animal" class="app-item"><div class="app-icon icon-pink-dark">🐾</div><span>Animal</span></a>
-      <a href="/sonho" class="app-item"><div class="app-icon icon-salmon">🎈</div><span>Sonho</span></a>
-      <a href="/manual" class="app-item"><div class="app-icon icon-brown">📜</div><span>Manual</span></a>
-      <a href="/plano" class="app-item"><div class="app-icon icon-cyan">🏗️</div><span>Plano</span></a>
-      
-      <a href="/loja" class="app-item"><div class="app-icon icon-purple">🛍️</div><span>Loja</span></a>
-      <a href="/config" class="app-item"><div class="app-icon icon-gray">⚙️</div><span>Config</span></a>
-      <a href="/amigos" class="app-item"><div class="app-icon icon-yellow">👥</div><span>Amigos</span></a>
+      <a href="/notes" class="app-item">
+        <div class="app-icon icon-blue-light">
+           <img src="/icons/notes.png" class="icon-img" alt="Notes" />
+        </div>
+        <span>Notes</span>
+      </a>
+
+      <a href="/guide" class="app-item">
+        <div class="app-icon icon-green">
+           <img src="/icons/guide.png" class="icon-img" alt="Guide" />
+        </div>
+        <span>Guide</span>
+      </a>
+
+      <a href="/pet" class="app-item">
+        <div class="app-icon icon-pink-dark">
+           <img src="/icons/pet.png" class="icon-img" alt="Pet" />
+        </div>
+        <span>Pet</span>
+      </a>
+
+      <a href="/dream" class="app-item">
+        <div class="app-icon icon-salmon">
+           <img src="/icons/dream.png" class="icon-img" alt="Dream" />
+        </div>
+        <span>Dream</span>
+      </a>
+
+      <a href="/handbook" class="app-item">
+        <div class="app-icon icon-brown">
+           <img src="/icons/handbook.png" class="icon-img" alt="Handbook" />
+        </div>
+        <span>Handbook</span>
+      </a>
+
+      <a href="/blueprint" class="app-item">
+        <div class="app-icon icon-cyan">
+           <img src="/icons/blueprint.png" class="icon-img" alt="Blueprint" />
+        </div>
+        <span>Blueprint</span>
+      </a>
+
+      <a href="/shop" class="app-item">
+        <div class="app-icon icon-purple">
+           <img src="/icons/shop.png" class="icon-img" alt="Shop" />
+        </div>
+        <span>Shop</span>
+      </a>
+
+      <a href="/settings" class="app-item">
+        <div class="app-icon icon-gray">
+           <img src="/icons/settings.png" class="icon-img" alt="Settings" />
+        </div>
+        <span>Settings</span>
+      </a>
+
+      <a href="/friends" class="app-item">
+        <div class="app-icon icon-yellow">
+           <img src="/icons/friends.png" class="icon-img" alt="Friends" />
+        </div>
+        <span>Friends</span>
+      </a>
 
     </div>
   </div>
@@ -54,9 +112,9 @@
   .phone-card {
     background: white;
     width: 100%;
-    max-width: 380px;
-    height: 600px; /* Altura fixa para permitir o scroll */
-    border-radius: 45px;
+    max-width: 440px;
+    height: 580px;
+    border-radius: 50px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     overflow: hidden;
     font-family: 'Varela Round', sans-serif;
@@ -79,23 +137,22 @@
   .avatar-circle img { width: 65px; height: 65px; border-radius: 50%; border: 3px solid #ffaa00; background: #fff; }
   .time { font-size: 3rem; font-weight: 800; line-height: 1; }
 
-  /* SCROLL MÁGICO */
+  /* SCROLL */
   .app-scroll-container {
     flex-grow: 1;
-    overflow-y: auto; /* Ativa a rolagem */
-    scrollbar-width: none; /* Esconde barra no Firefox */
+    overflow-y: auto;
+    scrollbar-width: none;
     -ms-overflow-style: none;
-    /* Sombra suave no topo ao rolar */
     mask-image: linear-gradient(to bottom, transparent, black 10px, black 95%, transparent);
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 10px, black 95%, transparent);
   }
-  .app-scroll-container::-webkit-scrollbar { display: none; } /* Esconde barra no Chrome */
+  .app-scroll-container::-webkit-scrollbar { display: none; }
 
   .app-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px 10px;
-    padding: 20px;
+    gap: 25px 15px;
+    padding: 30px;
     padding-bottom: 60px;
   }
 
@@ -105,7 +162,7 @@
     align-items: center;
     text-decoration: none;
     color: #777;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: bold;
     gap: 8px;
     transition: transform 0.2s;
@@ -121,11 +178,21 @@
     justify-content: center;
     font-size: 1.6rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    /* Adicionei overflow hidden para garantir que o print não vaze nas bordas */
+    overflow: hidden; 
+  }
+
+  /* CLASSE MÁGICA PARA SEUS PRINTS */
+  .icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta e preenche a bolinha */
+    display: block;
   }
 
   .scroll-indicator { text-align: center; color: #ddd; font-weight: bold; padding: 10px; background: white; z-index: 10; }
 
-  /* Cores das Bolinhas */
+  /* CORES DE FUNDO (Aparecem atrás do ícone se a imagem falhar ou tiver transparência) */
   .icon-blue { background: #d0f0fd; }
   .icon-pink { background: #fce4ec; }
   .icon-orange { background: #ffe0b2; }
